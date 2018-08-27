@@ -1,24 +1,449 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WerdVC-->
+        <scene sceneID="az1-a3-cn1">
+            <objects>
+                <viewController storyboardIdentifier="werd" id="ljw-lE-X5d" customClass="WerdVC" customModule="Watlo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QWo-Nb-v2l"/>
+                        <viewControllerLayoutGuide type="bottom" id="fmI-fW-s9z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="18e-TR-mSq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZC4-51-Mdi">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MC1-Ho-lkb">
+                                    <size key="itemSize" width="377" height="716"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="werdCell" id="u0L-o6-b7B" customClass="werdCell" customModule="Watlo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9" width="377" height="716"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="716"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page001" translatesAutoresizingMaskIntoConstraints="NO" id="Evn-Jo-4mV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="716"/>
+                                                    <color key="backgroundColor" red="0.96542206789999996" green="1" blue="0.59429875379999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Evn-Jo-4mV" secondAttribute="bottom" id="34F-OY-ZKi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Evn-Jo-4mV" secondAttribute="trailing" id="D1F-8V-gen"/>
+                                            <constraint firstItem="Evn-Jo-4mV" firstAttribute="top" secondItem="u0L-o6-b7B" secondAttribute="top" id="dfL-Ej-6sP"/>
+                                            <constraint firstItem="Evn-Jo-4mV" firstAttribute="leading" secondItem="u0L-o6-b7B" secondAttribute="leading" id="zht-eQ-GAD"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="werdPage" destination="Evn-Jo-4mV" id="68s-64-jgB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btG-he-rO5">
+                                <rect key="frame" x="0.0" y="-156" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc6-cg-1N6">
+                                        <rect key="frame" x="0.0" y="7.6666666666666572" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="F4M-QE-0dx"/>
+                                            <constraint firstAttribute="width" constant="35" id="alD-OX-Ykk"/>
+                                        </constraints>
+                                        <state key="normal" image="more"/>
+                                        <connections>
+                                            <action selector="showSettings:" destination="ljw-lE-X5d" eventType="touchUpInside" id="ZpB-VE-9Mo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.55436643835616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lc6-cg-1N6" firstAttribute="centerY" secondItem="btG-he-rO5" secondAttribute="centerY" id="383-4H-elU"/>
+                                    <constraint firstItem="lc6-cg-1N6" firstAttribute="leading" secondItem="btG-he-rO5" secondAttribute="leading" id="tcV-tL-eoY"/>
+                                    <constraint firstAttribute="height" constant="50" id="yHw-BL-eT2"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFw-00-Quh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FsD-gf-knc">
+                                        <rect key="frame" x="53" y="447.66666666666669" width="270" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-BM-2Va" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="5Ed-W5-DXa"/>
+                                                    <constraint firstAttribute="height" constant="39" id="VVo-MS-kqk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                                <state key="normal" title="ليس الآن">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="notNotBtnPressed:" destination="ljw-lE-X5d" eventType="touchUpInside" id="MNA-y3-fJO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-Gt-TV7" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="kMm-hy-kgj"/>
+                                                    <constraint firstAttribute="width" constant="110" id="xc7-JV-vnL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                                <state key="normal" title="استمر بالقراءة">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="continueBtnPressed:" destination="ljw-lE-X5d" eventType="touchUpInside" id="nlG-O0-nWe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ممتاز! لقد انتهيت من قراءة ورد اليوم هل ترغب في الإستمرار ؟" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW7-ZJ-UyW">
+                                        <rect key="frame" x="0.0" y="342" width="375" height="50"/>
+                                        <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="25"/>
+                                        <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fW7-ZJ-UyW" firstAttribute="leading" secondItem="JFw-00-Quh" secondAttribute="leading" id="SrM-85-aGL"/>
+                                    <constraint firstAttribute="trailing" secondItem="fW7-ZJ-UyW" secondAttribute="trailing" id="TxB-ry-JWB"/>
+                                    <constraint firstItem="fW7-ZJ-UyW" firstAttribute="centerY" secondItem="JFw-00-Quh" secondAttribute="centerY" id="Z8R-OG-M9o"/>
+                                    <constraint firstItem="FsD-gf-knc" firstAttribute="centerY" secondItem="JFw-00-Quh" secondAttribute="centerY" constant="100" id="c02-I2-c6V"/>
+                                    <constraint firstItem="fW7-ZJ-UyW" firstAttribute="centerX" secondItem="JFw-00-Quh" secondAttribute="centerX" id="hLc-uz-eT5"/>
+                                    <constraint firstItem="FsD-gf-knc" firstAttribute="centerX" secondItem="JFw-00-Quh" secondAttribute="centerX" id="t8d-ih-HYC"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8E-yD-L0i">
+                                <rect key="frame" x="0.0" y="44" width="375" height="708.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد انتهيت من هذه الختمة, بارك الله لك و جعل القرأن لك إماما و نورا و هدى و رحمة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voc-DQ-RDe">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="50"/>
+                                        <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="25"/>
+                                        <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8MF-yX-P1z">
+                                        <rect key="frame" x="53" y="445" width="270" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPT-1V-2W0" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="4Q1-0a-lL7"/>
+                                                    <constraint firstAttribute="width" constant="110" id="TOP-ou-fhs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="18"/>
+                                                <state key="normal" title="ليس الآن">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="khatmaFinishedDismissPressed:" destination="ljw-lE-X5d" eventType="touchUpInside" id="4lE-4y-Ys5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gID-HX-OA7" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="ZVh-Js-8Qj"/>
+                                                    <constraint firstAttribute="height" constant="39" id="u5B-BO-NdL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="18"/>
+                                                <state key="normal" title="بدء ختمة جديدة">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startNewKhatma:" destination="ljw-lE-X5d" eventType="touchUpInside" id="hYc-EO-3RJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8MF-yX-P1z" firstAttribute="centerX" secondItem="H8E-yD-L0i" secondAttribute="centerX" id="Dg5-be-KTG"/>
+                                    <constraint firstItem="voc-DQ-RDe" firstAttribute="leading" secondItem="H8E-yD-L0i" secondAttribute="leading" id="YCa-71-0DO"/>
+                                    <constraint firstAttribute="trailing" secondItem="voc-DQ-RDe" secondAttribute="trailing" id="gEg-12-ZMT"/>
+                                    <constraint firstItem="voc-DQ-RDe" firstAttribute="top" secondItem="H8E-yD-L0i" secondAttribute="top" constant="150" id="qef-0D-F7l"/>
+                                    <constraint firstItem="8MF-yX-P1z" firstAttribute="centerY" secondItem="H8E-yD-L0i" secondAttribute="centerY" constant="110" id="y26-u4-L8n"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noS-Wt-ZRA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="708.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pGo-w4-gos">
+                                        <rect key="frame" x="52.666666666666657" y="445" width="270" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80L-tQ-VL5" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="32n-ce-kgA"/>
+                                                    <constraint firstAttribute="width" constant="110" id="QDI-Y1-TuJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="21"/>
+                                                <state key="normal" title="عودة">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="closeSettings:" destination="ljw-lE-X5d" eventType="touchUpInside" id="QEU-rn-iRI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCG-DW-u93" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                                <rect key="frame" x="160" y="0.0" width="110" height="39"/>
+                                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="QCh-Vv-EjB"/>
+                                                    <constraint firstAttribute="width" constant="110" id="kEh-3l-bJg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="21"/>
+                                                <state key="normal" title="ختمة جديدة">
+                                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startNewKhatma:" destination="ljw-lE-X5d" eventType="touchUpInside" id="O5l-VC-7lz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pGo-w4-gos" firstAttribute="centerY" secondItem="noS-Wt-ZRA" secondAttribute="centerY" constant="110" id="POX-lh-3UE"/>
+                                    <constraint firstItem="pGo-w4-gos" firstAttribute="centerX" secondItem="noS-Wt-ZRA" secondAttribute="centerX" id="YmS-6M-gvE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmV-qT-OJD">
+                                <rect key="frame" x="182.33333333333334" y="752.66666666666663" width="10.333333333333343" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="btG-he-rO5" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" constant="-200" id="0iv-6I-eh7"/>
+                            <constraint firstItem="JFw-00-Quh" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="5dJ-5Q-5MN"/>
+                            <constraint firstItem="fmV-qT-OJD" firstAttribute="top" secondItem="noS-Wt-ZRA" secondAttribute="bottom" id="8DH-AU-PzO"/>
+                            <constraint firstItem="H8E-yD-L0i" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="AlI-Bs-i2i"/>
+                            <constraint firstAttribute="trailing" secondItem="H8E-yD-L0i" secondAttribute="trailing" id="Byt-Js-SqB"/>
+                            <constraint firstItem="fmV-qT-OJD" firstAttribute="centerX" secondItem="18e-TR-mSq" secondAttribute="centerX" id="KCf-Uk-Xck"/>
+                            <constraint firstItem="JFw-00-Quh" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="PZc-E6-9ai"/>
+                            <constraint firstItem="noS-Wt-ZRA" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="RZI-ew-bx5"/>
+                            <constraint firstAttribute="trailing" secondItem="btG-he-rO5" secondAttribute="trailing" id="U0B-9F-rHv"/>
+                            <constraint firstAttribute="trailing" secondItem="ZC4-51-Mdi" secondAttribute="trailing" id="WfJ-nR-gEH"/>
+                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="ZC4-51-Mdi" secondAttribute="bottom" id="YdZ-M0-gU4"/>
+                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="JFw-00-Quh" secondAttribute="bottom" id="apl-to-EPF"/>
+                            <constraint firstAttribute="trailing" secondItem="noS-Wt-ZRA" secondAttribute="trailing" id="caf-LZ-aN4"/>
+                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="fmV-qT-OJD" secondAttribute="bottom" constant="5" id="cmj-fY-LBm"/>
+                            <constraint firstItem="H8E-yD-L0i" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="dMZ-tZ-Yom"/>
+                            <constraint firstItem="btG-he-rO5" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="iWZ-eY-RQK"/>
+                            <constraint firstAttribute="trailing" secondItem="JFw-00-Quh" secondAttribute="trailing" id="n7c-2w-Wbh"/>
+                            <constraint firstItem="ZC4-51-Mdi" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="sxh-rN-pWn"/>
+                            <constraint firstItem="noS-Wt-ZRA" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="vMP-xz-fo3"/>
+                            <constraint firstItem="fmV-qT-OJD" firstAttribute="top" secondItem="H8E-yD-L0i" secondAttribute="bottom" id="wR5-yI-M0n"/>
+                            <constraint firstItem="ZC4-51-Mdi" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="zaa-ME-gea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentPageLbl" destination="fmV-qT-OJD" id="t5d-By-0m1"/>
+                        <outlet property="finishedView" destination="JFw-00-Quh" id="bWj-XQ-1aC"/>
+                        <outlet property="khatmaFinished" destination="H8E-yD-L0i" id="IuH-GS-Yl0"/>
+                        <outlet property="pagesCollectionView" destination="ZC4-51-Mdi" id="yJW-pk-iqf"/>
+                        <outlet property="settingsBtnView" destination="btG-he-rO5" id="G2e-UQ-j2Y"/>
+                        <outlet property="settingsBtnViewConstraint" destination="0iv-6I-eh7" id="LSr-hb-kQS"/>
+                        <outlet property="settingsView" destination="noS-Wt-ZRA" id="lnt-by-e35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqM-ic-5Ik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-344.80000000000001" y="586.69950738916259"/>
+        </scene>
+        <!--Select PreferencesVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="preferences" id="BYZ-38-t0r" customClass="SelectPreferencesVC" customModule="Watlo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fOV-LT-Qdc"/>
+                        <viewControllerLayoutGuide type="bottom" id="vB5-TK-oWH"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEm-nl-p53">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وَ اتْلُ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-zu-pya">
+                                        <rect key="frame" x="155.66666666666666" y="25.000000000000004" width="64.666666666666657" height="37.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="32"/>
+                                        <color key="textColor" red="1" green="0.6352856814546981" blue="0.014893916381945815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47253727791878175" green="0.15040651599711269" blue="0.16558533874113285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5Qg-zu-pya" firstAttribute="centerX" secondItem="EEm-nl-p53" secondAttribute="centerX" id="5PA-7G-vj2"/>
+                                    <constraint firstAttribute="height" constant="70" id="Mjv-WW-NTT"/>
+                                    <constraint firstItem="5Qg-zu-pya" firstAttribute="top" secondItem="EEm-nl-p53" secondAttribute="top" constant="25" id="O3r-ib-6gf"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="CA9-kN-aZj">
+                                <rect key="frame" x="0.0" y="311" width="365" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DAj-Dn-09G">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LT-Xm-jfn">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="selectedDaily:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Kio-vG-1NT"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المقدار اليومي:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Es-zE-TQ8">
+                                                <rect key="frame" x="182.66666666666663" y="5" width="182.33333333333337" height="20"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TLQ-uw-gbz">
+                                        <rect key="frame" x="0.0" y="80" width="365" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gv4-IH-krs">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="selectedDays:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="HcX-Ek-Kub"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مدة الختمة:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdq-Id-dFR">
+                                                <rect key="frame" x="182.66666666666663" y="5" width="182.33333333333337" height="20"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P9b-QN-5Z3">
+                                        <rect key="frame" x="0.0" y="160" width="365" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDb-Dr-Zem">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الوقت المفضل للقراءة:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xm4-zO-Coa">
+                                                <rect key="frame" x="182.66666666666663" y="5" width="182.33333333333337" height="20"/>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                                <color key="textColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxw-5X-l7s" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
+                                <rect key="frame" x="112.66666666666669" y="664" width="150" height="34"/>
+                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="J4h-yZ-RqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="22"/>
+                                <state key="normal" title="استمرار">
+                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continueBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1t-VB-Nj6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="CA9-kN-aZj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7cY-7Y-dIl"/>
+                            <constraint firstAttribute="trailing" secondItem="CA9-kN-aZj" secondAttribute="trailing" constant="10" id="NBz-Fs-dzE"/>
+                            <constraint firstItem="vB5-TK-oWH" firstAttribute="top" secondItem="Gxw-5X-l7s" secondAttribute="bottom" constant="80" id="SdS-Hb-KMV"/>
+                            <constraint firstItem="EEm-nl-p53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WlF-4l-pIF"/>
+                            <constraint firstItem="CA9-kN-aZj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d62-91-m9j"/>
+                            <constraint firstAttribute="trailing" secondItem="EEm-nl-p53" secondAttribute="trailing" id="eyp-17-Ow3"/>
+                            <constraint firstItem="Gxw-5X-l7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jfd-PO-dkE"/>
+                            <constraint firstItem="EEm-nl-p53" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mpp-LG-Yhi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dailyLoadPickerTextBox" destination="1LT-Xm-jfn" id="BL9-BN-2vO"/>
+                        <outlet property="favTimeTextBox" destination="CDb-Dr-Zem" id="AIX-de-QiK"/>
+                        <outlet property="numberOfDays" destination="Gv4-IH-krs" id="STT-bZ-cAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="114" y="-166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="more" width="128" height="128"/>
+        <image name="page001" width="1024" height="1656"/>
+    </resources>
 </document>

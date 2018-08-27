@@ -7,15 +7,53 @@
 //
 
 import UIKit
-
+import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let center = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let options : UNAuthorizationOptions = [.alert,.badge,.sound]
+        center.requestAuthorization(options: options) { (granted, error) in
+            if !granted{
+                print("something went wrong")
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "حان الآن موعد الورد اليومي"
+        content.sound = UNNotificationSound.default()
+        
+        if UserSettings.instance.favTime != nil {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .none
+            dateFormatter.timeStyle = .short
+            dateFormatter.locale = NSLocale(localeIdentifier: "AR") as Locale
+            let date = dateFormatter.date(from: UserSettings.instance.favTime!)
+            print(date!)
+            let triggerDaily = Calendar.current.dateComponents([.hour,.minute], from: date!)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            center.add(request) { (error) in
+                if let error = error{
+                    print("cant send notification")
+                }
+            }
+        }
+        
+       /* let dailyAmount = UserSettings.instance.dailyAmount
+        let favTime = UserSettings.instance.favTime
+        
+        if dailyAmount == nil || favTime == nil{
+            NavigateToPreferences()
+        }else{
+            NavigateToWerd()
+        }*/
         return true
     }
 
@@ -40,7 +78,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func NavigateToPreferences(){
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "preferences") as! SelectPreferencesVC
+        //self.navigationController?.pushViewController(nextViewController, animated:true)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = nextViewController
+        self.window?.makeKeyAndVisible()
+    }
+    func NavigateToWerd(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "werd")
+        //self.navigationController?.pushViewController(nextViewController, animated:true)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = nextViewController
+        self.window?.makeKeyAndVisible()
+        
+    }
 
 }
 

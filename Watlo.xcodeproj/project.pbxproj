@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D07054D2127BA1000F50651 /* werdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D07054C2127BA1000F50651 /* werdCell.swift */; };
+		0D4D419A2128CFCB00BBF890 /* Rob3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D41992128CFCA00BBF890 /* Rob3.swift */; };
+		0D5BCE322125AB2A0039C937 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BCE312125AB2A0039C937 /* RoundedButton.swift */; };
+		0D5BCE382125D0EA0039C937 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BCE372125D0EA0039C937 /* UserSettings.swift */; };
+		0D61BD3421275C84009A7197 /* WerdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D61BD3321275C84009A7197 /* WerdVC.swift */; };
 		0D66F7852123C65F005DDE45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66F7842123C65F005DDE45 /* AppDelegate.swift */; };
-		0D66F7872123C65F005DDE45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66F7862123C65F005DDE45 /* ViewController.swift */; };
+		0D66F7872123C65F005DDE45 /* SelectPreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D66F7862123C65F005DDE45 /* SelectPreferencesVC.swift */; };
 		0D66F78A2123C65F005DDE45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D66F7882123C65F005DDE45 /* Main.storyboard */; };
 		0D66F78C2123C665005DDE45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D66F78B2123C665005DDE45 /* Assets.xcassets */; };
 		0D66F78F2123C665005DDE45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D66F78D2123C665005DDE45 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D07054C2127BA1000F50651 /* werdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = werdCell.swift; sourceTree = "<group>"; };
+		0D4D41992128CFCA00BBF890 /* Rob3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rob3.swift; sourceTree = "<group>"; };
+		0D5BCE312125AB2A0039C937 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		0D5BCE372125D0EA0039C937 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		0D61BD3321275C84009A7197 /* WerdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerdVC.swift; sourceTree = "<group>"; };
 		0D66F7812123C65F005DDE45 /* Watlo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watlo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D66F7842123C65F005DDE45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D66F7862123C65F005DDE45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D66F7862123C65F005DDE45 /* SelectPreferencesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPreferencesVC.swift; sourceTree = "<group>"; };
 		0D66F7892123C65F005DDE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D66F78B2123C665005DDE45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D66F78E2123C665005DDE45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5BCE302125AB040039C937 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D5BCE312125AB2A0039C937 /* RoundedButton.swift */,
+				0D07054C2127BA1000F50651 /* werdCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D5BCE332125AD820039C937 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D66F7862123C65F005DDE45 /* SelectPreferencesVC.swift */,
+				0D61BD3321275C84009A7197 /* WerdVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D5BCE362125D0CE0039C937 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0D5BCE372125D0EA0039C937 /* UserSettings.swift */,
+				0D4D41992128CFCA00BBF890 /* Rob3.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		0D66F7782123C65F005DDE45 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +91,10 @@
 		0D66F7832123C65F005DDE45 /* Watlo */ = {
 			isa = PBXGroup;
 			children = (
+				0D5BCE362125D0CE0039C937 /* Util */,
+				0D5BCE332125AD820039C937 /* Controllers */,
+				0D5BCE302125AB040039C937 /* Views */,
 				0D66F7842123C65F005DDE45 /* AppDelegate.swift */,
-				0D66F7862123C65F005DDE45 /* ViewController.swift */,
 				0D66F7882123C65F005DDE45 /* Main.storyboard */,
 				0D66F78B2123C665005DDE45 /* Assets.xcassets */,
 				0D66F78D2123C665005DDE45 /* LaunchScreen.storyboard */,
@@ -135,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D66F7872123C65F005DDE45 /* ViewController.swift in Sources */,
+				0D66F7872123C65F005DDE45 /* SelectPreferencesVC.swift in Sources */,
+				0D5BCE322125AB2A0039C937 /* RoundedButton.swift in Sources */,
+				0D4D419A2128CFCB00BBF890 /* Rob3.swift in Sources */,
+				0D61BD3421275C84009A7197 /* WerdVC.swift in Sources */,
+				0D07054D2127BA1000F50651 /* werdCell.swift in Sources */,
+				0D5BCE382125D0EA0039C937 /* UserSettings.swift in Sources */,
 				0D66F7852123C65F005DDE45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
