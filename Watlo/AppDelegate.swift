@@ -45,15 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        
-       /* let dailyAmount = UserSettings.instance.dailyAmount
+       let dailyAmount = UserSettings.instance.dailyAmount
         let favTime = UserSettings.instance.favTime
         
         if dailyAmount == nil || favTime == nil{
             NavigateToPreferences()
         }else{
             NavigateToWerd()
-        }*/
+        }
         return true
     }
 
