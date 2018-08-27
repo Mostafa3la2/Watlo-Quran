@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIGestureRecognizerDelegate {
     
 
     @IBOutlet weak var settingsBtnViewConstraint: NSLayoutConstraint!
@@ -54,14 +54,19 @@ class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         currentIndex = startIndex
         maxWerd = startIndex+amount
         
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(animateSettingsBtnView))
+        singleTap.numberOfTapsRequired = 1
+        singleTap.delegate = self
+        pagesCollectionView.addGestureRecognizer(singleTap)
         
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         doubleTap.numberOfTapsRequired = 2
+        doubleTap.delegate = self
         pagesCollectionView.addGestureRecognizer(doubleTap)
         
-        let singleTap = UITapGestureRecognizer(target: self, action: #selector(animateSettingsBtnView))
-        singleTap.numberOfTapsRequired = 1
-        pagesCollectionView.addGestureRecognizer(singleTap)
+        singleTap.require(toFail: doubleTap)
+        
+      
     }
     @objc func doubleTapped(){
         if clickedIndex == amount-1{
@@ -153,5 +158,8 @@ class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
     @IBAction func showSettings(_ sender: Any) {
         settingsView.isHidden = false
+    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
