@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,15 +43,24 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="716"/>
                                                     <color key="backgroundColor" red="0.96542206789999996" green="1" blue="0.59429875379999997" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmV-qT-OJD">
+                                                    <rect key="frame" x="183" y="688" width="10" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Evn-Jo-4mV" secondAttribute="bottom" id="34F-OY-ZKi"/>
+                                            <constraint firstItem="fmV-qT-OJD" firstAttribute="centerX" secondItem="u0L-o6-b7B" secondAttribute="centerX" id="8f8-KU-69c"/>
                                             <constraint firstAttribute="trailing" secondItem="Evn-Jo-4mV" secondAttribute="trailing" id="D1F-8V-gen"/>
                                             <constraint firstItem="Evn-Jo-4mV" firstAttribute="top" secondItem="u0L-o6-b7B" secondAttribute="top" id="dfL-Ej-6sP"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="fmV-qT-OJD" secondAttribute="bottom" id="zNf-Bc-biD"/>
                                             <constraint firstItem="Evn-Jo-4mV" firstAttribute="leading" secondItem="u0L-o6-b7B" secondAttribute="leading" id="zht-eQ-GAD"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="currentPageLbl" destination="fmV-qT-OJD" id="NOl-9J-4uK"/>
                                             <outlet property="werdPage" destination="Evn-Jo-4mV" id="68s-64-jgB"/>
                                         </connections>
                                     </collectionViewCell>
@@ -60,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="-156" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc6-cg-1N6">
-                                        <rect key="frame" x="0.0" y="7.6666666666666572" width="35" height="35"/>
+                                        <rect key="frame" x="0.0" y="7" width="35" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="F4M-QE-0dx"/>
                                             <constraint firstAttribute="width" constant="35" id="alD-OX-Ykk"/>
@@ -82,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FsD-gf-knc">
-                                        <rect key="frame" x="53" y="447.66666666666669" width="270" height="39"/>
+                                        <rect key="frame" x="53" y="448" width="270" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-BM-2Va" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
@@ -144,7 +154,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8E-yD-L0i">
-                                <rect key="frame" x="0.0" y="44" width="375" height="708.66666666666663"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="709"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لقد انتهيت من هذه الختمة, بارك الله لك و جعل القرأن لك إماما و نورا و هدى و رحمة" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voc-DQ-RDe">
                                         <rect key="frame" x="0.0" y="150" width="375" height="50"/>
@@ -208,10 +218,10 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noS-Wt-ZRA">
-                                <rect key="frame" x="0.0" y="44" width="375" height="708.66666666666663"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="pGo-w4-gos">
-                                        <rect key="frame" x="52.666666666666657" y="445" width="270" height="39"/>
+                                        <rect key="frame" x="53" y="458" width="270" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80L-tQ-VL5" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
@@ -262,21 +272,13 @@
                                     <constraint firstItem="pGo-w4-gos" firstAttribute="centerX" secondItem="noS-Wt-ZRA" secondAttribute="centerX" id="YmS-6M-gvE"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmV-qT-OJD">
-                                <rect key="frame" x="182.33333333333334" y="752.66666666666663" width="10.333333333333343" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="btG-he-rO5" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" constant="-200" id="0iv-6I-eh7"/>
                             <constraint firstItem="JFw-00-Quh" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="5dJ-5Q-5MN"/>
-                            <constraint firstItem="fmV-qT-OJD" firstAttribute="top" secondItem="noS-Wt-ZRA" secondAttribute="bottom" id="8DH-AU-PzO"/>
                             <constraint firstItem="H8E-yD-L0i" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="AlI-Bs-i2i"/>
                             <constraint firstAttribute="trailing" secondItem="H8E-yD-L0i" secondAttribute="trailing" id="Byt-Js-SqB"/>
-                            <constraint firstItem="fmV-qT-OJD" firstAttribute="centerX" secondItem="18e-TR-mSq" secondAttribute="centerX" id="KCf-Uk-Xck"/>
                             <constraint firstItem="JFw-00-Quh" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="PZc-E6-9ai"/>
                             <constraint firstItem="noS-Wt-ZRA" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="RZI-ew-bx5"/>
                             <constraint firstAttribute="trailing" secondItem="btG-he-rO5" secondAttribute="trailing" id="U0B-9F-rHv"/>
@@ -284,18 +286,17 @@
                             <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="ZC4-51-Mdi" secondAttribute="bottom" id="YdZ-M0-gU4"/>
                             <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="JFw-00-Quh" secondAttribute="bottom" id="apl-to-EPF"/>
                             <constraint firstAttribute="trailing" secondItem="noS-Wt-ZRA" secondAttribute="trailing" id="caf-LZ-aN4"/>
-                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="fmV-qT-OJD" secondAttribute="bottom" constant="5" id="cmj-fY-LBm"/>
                             <constraint firstItem="H8E-yD-L0i" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="dMZ-tZ-Yom"/>
+                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="noS-Wt-ZRA" secondAttribute="bottom" id="gNM-L9-z5W"/>
+                            <constraint firstItem="fmI-fW-s9z" firstAttribute="top" secondItem="H8E-yD-L0i" secondAttribute="bottom" constant="25" id="hEN-cW-krP"/>
                             <constraint firstItem="btG-he-rO5" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="iWZ-eY-RQK"/>
                             <constraint firstAttribute="trailing" secondItem="JFw-00-Quh" secondAttribute="trailing" id="n7c-2w-Wbh"/>
                             <constraint firstItem="ZC4-51-Mdi" firstAttribute="leading" secondItem="18e-TR-mSq" secondAttribute="leading" id="sxh-rN-pWn"/>
                             <constraint firstItem="noS-Wt-ZRA" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="vMP-xz-fo3"/>
-                            <constraint firstItem="fmV-qT-OJD" firstAttribute="top" secondItem="H8E-yD-L0i" secondAttribute="bottom" id="wR5-yI-M0n"/>
                             <constraint firstItem="ZC4-51-Mdi" firstAttribute="top" secondItem="QWo-Nb-v2l" secondAttribute="bottom" id="zaa-ME-gea"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="currentPageLbl" destination="fmV-qT-OJD" id="t5d-By-0m1"/>
                         <outlet property="finishedView" destination="JFw-00-Quh" id="bWj-XQ-1aC"/>
                         <outlet property="khatmaFinished" destination="H8E-yD-L0i" id="IuH-GS-Yl0"/>
                         <outlet property="pagesCollectionView" destination="ZC4-51-Mdi" id="yJW-pk-iqf"/>
@@ -401,13 +402,13 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxw-5X-l7s" customClass="RoundedButton" customModule="Watlo" customModuleProvider="target">
                                 <rect key="frame" x="112.66666666666669" y="664" width="150" height="34"/>
-                                <color key="backgroundColor" red="0.4725372779" green="0.15040651599999999" blue="0.1655853387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47058823529411764" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="J4h-yZ-RqK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="DamascusBold" family="Damascus" pointSize="22"/>
                                 <state key="normal" title="استمرار">
-                                    <color key="titleColor" red="1" green="0.63528568149999998" blue="0.01489391638" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.63529411764705879" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">

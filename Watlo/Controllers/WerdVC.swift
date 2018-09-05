@@ -14,7 +14,6 @@ class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     @IBOutlet weak var settingsBtnViewConstraint: NSLayoutConstraint!
     @IBOutlet weak var settingsBtnView: UIView!
     @IBOutlet weak var settingsView: UIView!
-    @IBOutlet weak var currentPageLbl: UILabel!
     @IBOutlet weak var khatmaFinished: UIView!
     
     @IBOutlet weak var finishedView: UIView!
@@ -113,11 +112,7 @@ class WerdVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
             return UICollectionViewCell()
         }
         cell.configureCell(pageNumber: currentIndex+indexPath.row)
-        let format = NumberFormatter()
-        format.locale = Locale(identifier: "ar_EG")
-        let number = format.number(from: String(currentIndex+indexPath.row))
-        let ARnumber = format.string(from: number!)
-        currentPageLbl.text = ARnumber
+        
         return cell
     }
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

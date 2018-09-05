@@ -12,9 +12,15 @@ class werdCell: UICollectionViewCell {
     
     @IBOutlet weak var werdPage: UIImageView!
     
+    @IBOutlet weak var currentPageLbl: UILabel!
     
     func configureCell(pageNumber:Int){
         let image = UIImage(named: "page\(convertIndexToString(index: pageNumber))")
+        let format = NumberFormatter()
+        format.locale = Locale(identifier: "ar_EG")
+        let number = format.number(from: String(pageNumber))
+        let ARnumber = format.string(from: number!)
+        currentPageLbl.text = ARnumber
         werdPage.image = image
     }
     func convertIndexToString(index:Int)->String{
