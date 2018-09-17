@@ -170,7 +170,7 @@ class SelectPreferencesVC: UIViewController,UIPickerViewDataSource, UIPickerView
                         dailyAmount = String(604/60)
                         lastDay = 14
                         }
-                }
+                
                     UserSettings.instance.favTime = favTime
                     UserSettings.instance.dailyAmount = dailyAmount
                     UserSettings.instance.lastDay = lastDay
@@ -178,6 +178,7 @@ class SelectPreferencesVC: UIViewController,UIPickerViewDataSource, UIPickerView
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "werd")
                     self.present(nextViewController,animated: true,completion: nil)
+                    }
             }
         }
     }
