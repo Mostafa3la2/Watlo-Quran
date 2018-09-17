@@ -322,10 +322,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEm-nl-p53">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وَ اتْلُ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Qg-zu-pya">
-                                        <rect key="frame" x="155.66666666666666" y="25.000000000000004" width="64.666666666666657" height="37.333333333333343"/>
+                                        <rect key="frame" x="155.66666666666666" y="40" width="64.666666666666657" height="37.333333333333343"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="32"/>
                                         <color key="textColor" red="1" green="0.6352856814546981" blue="0.014893916381945815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -334,8 +334,8 @@
                                 <color key="backgroundColor" red="0.47253727791878175" green="0.15040651599711269" blue="0.16558533874113285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="5Qg-zu-pya" firstAttribute="centerX" secondItem="EEm-nl-p53" secondAttribute="centerX" id="5PA-7G-vj2"/>
-                                    <constraint firstAttribute="height" constant="70" id="Mjv-WW-NTT"/>
-                                    <constraint firstItem="5Qg-zu-pya" firstAttribute="top" secondItem="EEm-nl-p53" secondAttribute="top" constant="25" id="O3r-ib-6gf"/>
+                                    <constraint firstAttribute="height" constant="80" id="Mjv-WW-NTT"/>
+                                    <constraint firstItem="5Qg-zu-pya" firstAttribute="top" secondItem="EEm-nl-p53" secondAttribute="top" constant="40" id="O3r-ib-6gf"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="CA9-kN-aZj">

@@ -144,9 +144,9 @@ class SelectPreferencesVC: UIViewController,UIPickerViewDataSource, UIPickerView
                     self.present(nextViewController,animated: true,completion: nil)
                 }
             }
-            else if let day = numberOfDays.text{
-                print("here")
-                    
+            else if let day = numberOfDays.text {
+                
+                    if day != "" {
                     var dailyAmount = ""
                     var lastDay = 0
                     let daysEnum = days(rawValue:day)!
@@ -169,7 +169,7 @@ class SelectPreferencesVC: UIViewController,UIPickerViewDataSource, UIPickerView
                     case .twoMonths:
                         dailyAmount = String(604/60)
                         lastDay = 14
-                   
+                        }
                 }
                     UserSettings.instance.favTime = favTime
                     UserSettings.instance.dailyAmount = dailyAmount
