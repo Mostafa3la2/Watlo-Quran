@@ -86,8 +86,9 @@ class SelectPreferencesVC: UIViewController,UIPickerViewDataSource, UIPickerView
         let toolBar = UIToolbar(frame: CGRect.init(x:0, y:self.view.frame.size.height/6, width:self.view.frame.size.width, height:40.0))
         toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
         toolBar.barStyle = .black
-        toolBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        toolBar.backgroundColor = #colorLiteral(red: 0.4725372779, green: 0.150406516, blue: 0.1655853387, alpha: 1)
+        toolBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+       
+        toolBar.barTintColor = #colorLiteral(red: 0.3556472081, green: 0.1146584117, blue: 0.1279842132, alpha: 1)
         //let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(SelectPreferencesVC.donePressed))
        // doneButton.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:#colorLiteral(red: 1, green: 0.6352856815, blue: 0.01489391638, alpha: 1) ], for: .normal)
         
